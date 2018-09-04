@@ -5,3 +5,5 @@ config
 *.sw[po]
 azure-prepare-env/params.yml
 azure-prepare-env/creds.yml
+install-pcf/gcp/mds-params.yml
+install-pcf/gcp/srt-mds-params.yml
