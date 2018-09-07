@@ -9,8 +9,21 @@ resource "google_compute_address" "cf-tcp" {
 }
 
 // Static IP address for forwarding rule for sshproxy & doppler
-resource "google_compute_address" "ssh-and-doppler" {
-  name = "${var.prefix}-ssh-and-doppler"
+// For SRT these need to be separate
+//resource "google_compute_address" "ssh-and-doppler" {
+//  name = "${var.prefix}-ssh-and-doppler"
+//}
+
+// Static IP address for forwarding rule for sshproxy & doppler
+// For SRT these need to be separate
+resource "google_compute_address" "doppler" {
+  name = "${var.prefix}-doppler"
+}
+
+// Static IP address for forwarding rule for sshproxy & doppler
+// For SRT these need to be separate
+resource "google_compute_address" "ssh" {
+  name = "${var.prefix}-ssh"
 }
 
 // Static IP address for OpsManager

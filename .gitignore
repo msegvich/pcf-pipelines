@@ -7,3 +7,5 @@ azure-prepare-env/params.yml
 azure-prepare-env/creds.yml
 install-pcf/gcp/mds-params.yml
 install-pcf/gcp/srt-mds-params.yml
+install-pcf/gcp/experiment-srt-mds-params.yml
+upgrade-buildpacks/mds-params.yml

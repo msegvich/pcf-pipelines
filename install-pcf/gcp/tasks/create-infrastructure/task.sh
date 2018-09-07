@@ -78,7 +78,9 @@ terraform apply \
 cd $root/create-infrastructure-output
   output_json=$(terraform output -json -state=terraform.tfstate)
   pub_ip_global_pcf=$(echo $output_json | jq --raw-output '.pub_ip_global_pcf.value')
-  pub_ip_ssh_and_doppler=$(echo $output_json | jq --raw-output '.pub_ip_ssh_and_doppler.value')
+  # pub_ip_ssh_and_doppler=$(echo $output_json | jq --raw-output '.pub_ip_ssh_and_doppler.value')
+  pub_ip_ssh=$(echo $output_json | jq --raw-output '.pub_ip_ssh.value')
+  pub_ip_doppler=$(echo $output_json | jq --raw-output '.pub_ip_doppler.value')
   pub_ip_ssh_tcp_lb=$(echo $output_json | jq --raw-output '.pub_ip_ssh_tcp_lb.value')
   pub_ip_opsman=$(echo $output_json | jq --raw-output '.pub_ip_opsman.value')
 cd -
@@ -87,9 +89,9 @@ echo "Please configure DNS as follows:"
 echo "----------------------------------------------------------------------------------------------"
 echo "*.${SYSTEM_DOMAIN} == ${pub_ip_global_pcf}"
 echo "*.${APPS_DOMAIN} == ${pub_ip_global_pcf}"
-echo "ssh.${SYSTEM_DOMAIN} == ${pub_ip_ssh_and_doppler}"
-echo "doppler.${SYSTEM_DOMAIN} == ${pub_ip_ssh_and_doppler}"
-echo "loggregator.${SYSTEM_DOMAIN} == ${pub_ip_ssh_and_doppler}"
+echo "ssh.${SYSTEM_DOMAIN} == ${pub_ip_ssh}"
+echo "doppler.${SYSTEM_DOMAIN} == ${pub_ip_doppler}"
+echo "loggregator.${SYSTEM_DOMAIN} == ${pub_ip_doppler}"
 echo "tcp.${PCF_ERT_DOMAIN} == ${pub_ip_ssh_tcp_lb}"
 echo "opsman.${PCF_ERT_DOMAIN} == ${pub_ip_opsman}"
 echo "----------------------------------------------------------------------------------------------"

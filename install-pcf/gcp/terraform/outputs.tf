@@ -132,8 +132,17 @@ output "pub_ip_global_pcf" {
   value = "${google_compute_global_address.pcf.address}"
 }
 
-output "pub_ip_ssh_and_doppler" {
-  value = "${google_compute_address.ssh-and-doppler.address}"
+// Needed separate IPs for ssh and doppler for SRT
+//output "pub_ip_ssh_and_doppler" {
+//  value = "${google_compute_address.ssh-and-doppler.address}"
+//}
+
+output "pub_ip_ssh" {
+  value = "${google_compute_address.ssh.address}"
+}
+
+output "pub_ip_doppler" {
+  value = "${google_compute_address.doppler.address}"
 }
 
 output "pub_ip_ssh_tcp_lb" {
