@@ -41,7 +41,7 @@ resource "google_dns_record_set" "app-ssh-dns" {
 
   managed_zone = "${google_dns_managed_zone.env_dns_zone.name}"
 
-  rrdatas = ["${google_compute_address.ssh-and-doppler.address}"]
+  rrdatas = ["${google_compute_address.ssh.address}"]
 }
 
 resource "google_dns_record_set" "doppler-dns" {
@@ -51,7 +51,7 @@ resource "google_dns_record_set" "doppler-dns" {
 
   managed_zone = "${google_dns_managed_zone.env_dns_zone.name}"
 
-  rrdatas = ["${google_compute_address.ssh-and-doppler.address}"]
+  rrdatas = ["${google_compute_address.-doppler.address}"]
 }
 
 resource "google_dns_record_set" "loggregator-dns" {
@@ -61,7 +61,7 @@ resource "google_dns_record_set" "loggregator-dns" {
 
   managed_zone = "${google_dns_managed_zone.env_dns_zone.name}"
 
-  rrdatas = ["${google_compute_address.ssh-and-doppler.address}"]
+  rrdatas = ["${google_compute_address.doppler.address}"]
 }
 
 resource "google_dns_record_set" "tcp-dns" {
