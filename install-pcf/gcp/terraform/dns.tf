@@ -51,7 +51,7 @@ resource "google_dns_record_set" "doppler-dns" {
 
   managed_zone = "${google_dns_managed_zone.env_dns_zone.name}"
 
-  rrdatas = ["${google_compute_address.-doppler.address}"]
+  rrdatas = ["${google_compute_address.doppler.address}"]
 }
 
 resource "google_dns_record_set" "loggregator-dns" {
