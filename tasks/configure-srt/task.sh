@@ -285,7 +285,7 @@ cf_properties=$(
     {
       ".properties.system_database": { "value": "internal_pxc" }
     }
-    
+
     +
 
     #UAA
@@ -302,7 +302,7 @@ cf_properties=$(
 
     # Credhub
     {
-      ".properties.credhub_database": { "value": internal_mysql },
+      ".properties.credhub_database": { "value": "internal_mysql" },
       ".properties.secure_service_instance_credentials": { "value": true }
     }
 
