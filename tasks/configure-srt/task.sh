@@ -309,20 +309,21 @@ cf_properties=$(
     +
 
     # Credhub
-    {
-      ".properties.credhub_database": { "value": "external" },
-      ".properties.credhub_database.external.host": { "value": $db_host },
-      ".properties.credhub_database.external.port": { "value": "3306" },
-      ".properties.credhub_database.external.username": { "value": $credhub_username },
-      ".properties.credhub_database.external.password": { "value": { "secret": $credhub_password } },
-      ".properties.credhub_database.external.tls_ca": { "value": $credhub_tls_ca },
-      ".properties.secure_service_instance_credentials": { "value": true }
-    }
-
+    # Until this issue is resolved, https://issuetracker.google.com/issues/112084548?pli=1, use internal
 #    {
-#      ".properties.credhub_database": { "value": "internal_mysql" },
+#      ".properties.credhub_database": { "value": "external" },
+#      ".properties.credhub_database.external.host": { "value": $db_host },
+#      ".properties.credhub_database.external.port": { "value": "3306" },
+#      ".properties.credhub_database.external.username": { "value": $credhub_username },
+#      ".properties.credhub_database.external.password": { "value": { "secret": $credhub_password } },
+#      ".properties.credhub_database.external.tls_ca": { "value": $credhub_tls_ca },
 #      ".properties.secure_service_instance_credentials": { "value": true }
 #    }
+
+    {
+      ".properties.credhub_database": { "value": "internal_mysql" },
+      ".properties.secure_service_instance_credentials": { "value": true }
+    }
 
     +
 
