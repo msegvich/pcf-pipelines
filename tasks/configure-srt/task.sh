@@ -151,7 +151,7 @@ cf_resources=$(
       "blobstore": {"internet_connected": $internet_connected},
       "control": {"internet_connected": $internet_connected},
       "compute": {"internet_connected": $internet_connected},
-      "backup-prepare": {"internet_connected": $internet_connected},
+      "backup_restore": {"internet_connected": $internet_connected},
       "ha_proxy": {"internet_connected": $internet_connected},
       "mysql_monitor": {"instances": 0, "internet_connected": $internet_connected},
       "router": {"internet_connected": $internet_connected},
