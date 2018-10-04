@@ -228,6 +228,7 @@ jobs:
       OM_IP: ""
       OPSMAN_CLIENT_ID: ""
       OPSMAN_CLIENT_SECRET: ""
+      STEMCELL_TYPE: {{stemcell_type}}
 
 
   - task: stage-tile
