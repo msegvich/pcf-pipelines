@@ -230,6 +230,8 @@ cf_properties=$(
     --argjson networking_poe_ssl_certs "$networking_poe_ssl_certs_json" \
     --arg container_networking_nw_cidr "$CONTAINER_NETWORKING_NW_CIDR" \
     --arg credhub_tls_ca "$CREDHUB_TLS_CA" \
+    --arg credhub_username "$CREDHUB_USERNAME" \
+    --arg credhub_password "$CREDHUB_PASSWORD" \
     '
     {
       ".uaa.service_provider_key_credentials": {

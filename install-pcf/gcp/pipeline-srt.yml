@@ -314,6 +314,8 @@ jobs:
       CREDUB_ENCRYPTION_KEY_SECRET3: {{credhub_encryption_key_secret3}}
       CREDHUB_PRIMARY_ENCRYPTION_NAME: {{credhub_primary_encryption_name}}
       CREDHUB_TLS_CA: {{credhub_tls_ca}}
+      CREDHUB_USERNAME: {{credhub_username}}
+      CREDHUB_PASSWORD: {{credhub_password}}
       # aws specific
       S3_ENDPOINT:
       OPSMAN_CLIENT_ID: ""
