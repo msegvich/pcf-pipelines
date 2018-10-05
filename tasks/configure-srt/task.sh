@@ -259,57 +259,65 @@ cf_properties=$(
     +
 
     # Databases
-    {
-     ".properties.system_database": { "value": "external" },
-     ".properties.system_database.external.port": { "value": "3306" },
-     ".properties.system_database.external.host": { "value": $db_host },
-     ".properties.system_database.external.app_usage_service_username": { "value": $db_app_usage_service_username },
-     ".properties.system_database.external.app_usage_service_password": { "value": { "secret": $db_app_usage_service_password } },
-     ".properties.system_database.external.autoscale_username": { "value": $db_autoscale_username },
-     ".properties.system_database.external.autoscale_password": { "value": { "secret": $db_autoscale_password } },
-     ".properties.system_database.external.diego_username": { "value": $db_diego_username },
-     ".properties.system_database.external.diego_password": { "value": { "secret": $db_diego_password } },
-     ".properties.system_database.external.notifications_username": { "value": $db_notifications_username },
-     ".properties.system_database.external.notifications_password": { "value": { "secret": $db_notifications_password } },
-     ".properties.system_database.external.routing_username": { "value": $db_routing_username },
-     ".properties.system_database.external.routing_password": { "value": { "secret": $db_routing_password } },
-     ".properties.system_database.external.ccdb_username": { "value": $db_ccdb_username },
-     ".properties.system_database.external.ccdb_password": { "value": { "secret": $db_ccdb_password } },
-     ".properties.system_database.external.account_username": { "value": $db_accountdb_username },
-     ".properties.system_database.external.account_password": { "value": { "secret": $db_accountdb_password } },
-     ".properties.system_database.external.networkpolicyserver_username": { "value": $db_networkpolicyserverdb_username },
-     ".properties.system_database.external.networkpolicyserver_password": { "value": { "secret": $db_networkpolicyserverdb_password } },
-     ".properties.system_database.external.nfsvolume_username": { "value": $db_nfsvolumedb_username },
-     ".properties.system_database.external.nfsvolume_password": { "value": { "secret": $db_nfsvolumedb_password } },
-     ".properties.system_database.external.locket_username": { "value": $db_locket_username },
-     ".properties.system_database.external.locket_password": { "value": { "secret": $db_locket_password } },
-     ".properties.system_database.external.silk_username": { "value": $db_silk_username },
-     ".properties.system_database.external.silk_password": { "value": { "secret": $db_silk_password } }
-     }
-
 #    {
-#      ".properties.system_database": { "value": "internal_pxc" }
-#    }
+#     ".properties.system_database": { "value": "external" },
+#     ".properties.system_database.external.port": { "value": "3306" },
+#     ".properties.system_database.external.host": { "value": $db_host },
+#     ".properties.system_database.external.app_usage_service_username": { "value": $db_app_usage_service_username },
+#     ".properties.system_database.external.app_usage_service_password": { "value": { "secret": $db_app_usage_service_password } },
+#     ".properties.system_database.external.autoscale_username": { "value": $db_autoscale_username },
+#     ".properties.system_database.external.autoscale_password": { "value": { "secret": $db_autoscale_password } },
+#     ".properties.system_database.external.diego_username": { "value": $db_diego_username },
+#     ".properties.system_database.external.diego_password": { "value": { "secret": $db_diego_password } },
+#     ".properties.system_database.external.notifications_username": { "value": $db_notifications_username },
+#     ".properties.system_database.external.notifications_password": { "value": { "secret": $db_notifications_password } },
+#     ".properties.system_database.external.routing_username": { "value": $db_routing_username },
+#     ".properties.system_database.external.routing_password": { "value": { "secret": $db_routing_password } },
+#     ".properties.system_database.external.ccdb_username": { "value": $db_ccdb_username },
+#     ".properties.system_database.external.ccdb_password": { "value": { "secret": $db_ccdb_password } },
+#     ".properties.system_database.external.account_username": { "value": $db_accountdb_username },
+#     ".properties.system_database.external.account_password": { "value": { "secret": $db_accountdb_password } },
+#     ".properties.system_database.external.networkpolicyserver_username": { "value": $db_networkpolicyserverdb_username },
+#     ".properties.system_database.external.networkpolicyserver_password": { "value": { "secret": $db_networkpolicyserverdb_password } },
+#     ".properties.system_database.external.nfsvolume_username": { "value": $db_nfsvolumedb_username },
+#     ".properties.system_database.external.nfsvolume_password": { "value": { "secret": $db_nfsvolumedb_password } },
+#     ".properties.system_database.external.locket_username": { "value": $db_locket_username },
+#     ".properties.system_database.external.locket_password": { "value": { "secret": $db_locket_password } },
+#     ".properties.system_database.external.silk_username": { "value": $db_silk_username },
+#     ".properties.system_database.external.silk_password": { "value": { "secret": $db_silk_password } }
+#     }
+
+    {
+      ".properties.system_database": { "value": "internal_pxc" }
+    }
 
     +
 
     #UAA
-    {
-     ".properties.uaa_database": { "value": "external" },
-     ".properties.uaa_database.external.host": { "value": $db_host },
-     ".properties.uaa_database.external.port": { "value": "3306" },
-     ".properties.uaa_database.external.uaa_username": { "value": $db_uaa_username },
-     ".properties.uaa_database.external.uaa_password": { "value": { "secret": $db_uaa_password } }
-     }
-
 #    {
-#      ".properties.uaa_database": { "value": "internal_mysql" }
-#    }
+#     ".properties.uaa_database": { "value": "external" },
+#     ".properties.uaa_database.external.host": { "value": $db_host },
+#     ".properties.uaa_database.external.port": { "value": "3306" },
+#     ".properties.uaa_database.external.uaa_username": { "value": $db_uaa_username },
+#     ".properties.uaa_database.external.uaa_password": { "value": { "secret": $db_uaa_password } }
+#     }
+
+    {
+      ".properties.uaa_database": { "value": "internal_mysql" }
+    }
 
     +
 
     # Credhub
-    # Until this issue is resolved, https://issuetracker.google.com/issues/112084548?pli=1, use internal
+    # Until this issue is resolved, https://issuetracker.google.com/issues/112084548?pli=1, use internal.
+    # However, this also means the other DBs need to be internal as well or you get the following. It's either all
+    # internal or all external.
+    #Caused by: org.flywaydb.core.internal.exception.FlywaySqlException:
+    #Unable to obtain database connection
+    #------------------------------------
+    #SQL State  : 08
+    #Error Code : -1
+    #Message    : Could not connect to mysql.service.cf.internal:3306 : unexpected end of stream, read 0 bytes from 4 (socket was closed by server)
 #    {
 #      ".properties.credhub_database": { "value": "external" },
 #      ".properties.credhub_database.external.host": { "value": $db_host },
