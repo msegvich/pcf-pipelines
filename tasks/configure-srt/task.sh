@@ -310,7 +310,7 @@ cf_properties=$(
 
     # Credhub
     # Until this issue is resolved, https://issuetracker.google.com/issues/112084548?pli=1, use internal.
-    # However, this also means the other DBs need to be internal as well or you get the following. It's either all
+    # However, this also means the other DBs need to be internal as well or you get the following. It is either all
     # internal or all external.
     #Caused by: org.flywaydb.core.internal.exception.FlywaySqlException:
     #Unable to obtain database connection
