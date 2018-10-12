@@ -46,22 +46,15 @@ if [ -n "$STEMCELL_VERSION" ]; then
   if [[ -z "$stemcell" ]]; then
     echo "Downloading stemcell $STEMCELL_VERSION"
 
-    if [ "$STEMCELL_TYPE" = "xenial" ]; then
-        UBUNTU_STEMCELL="stemcells-ubuntu-xenial"
-    else
-        UBUNTU_STEMCELL="stemcells"
-    fi
-
     product_slug=$(
       jq --raw-output \
-      --arg ubuntu_stemcell "$UBUNTU_STEMCELL" \
         '
         if any(.Dependencies[]; select(.Release.Product.Name | contains("Stemcells for PCF (Windows)"))) then
           "stemcells-windows-server"
         elif any(.Dependencies[]; select(.Release.Product.Name | contains("Stemcells for PCF (Ubuntu Xenial)"))) then
           "stemcells-ubuntu-xenial"
         else
-          $ubuntu_stemcell
+          "stemcells"
         end
         ' < pivnet-product/metadata.json
     )
