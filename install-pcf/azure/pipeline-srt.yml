@@ -61,7 +61,7 @@ resources:
 
 - name: pivnet-opsmgr
   type: pivnet
-  check_every: 4h
+#  check_every: 4h
   source:
     api_token: {{pivnet_token}}
     product_slug: ops-manager
@@ -70,7 +70,7 @@ resources:
 
 - name: pivnet-elastic-runtime
   type: pivnet
-  check_every: 4h
+#  check_every: 4h
   source:
     api_token: {{pivnet_token}}
     product_slug: elastic-runtime
